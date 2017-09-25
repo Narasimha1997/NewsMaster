@@ -1,8 +1,9 @@
 {
-  "name": "music-app",
+  "name": "news-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "playmusic": "^2.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.13"

@@ -1,40 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>News Master</title>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="index.js" charset="utf-8"></script>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <style>
+    .mdl-grid {
+    max-width: 600px;
+}
+.mdl-card__media {
+    margin: 0;
+}
+.mdl-card__media > img {
+    max-width: 100%;
+}
+.mdl-card__actions {
+    display: flex;
+    box-sizing:border-box;
+    align-items: center;
+}
+.mdl-card__actions > .mdl-button--icon {
+    margin-right: 3px;
+    margin-left: 3px;
+}
+.foot{
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+    .lol{
+      background-color: #B71C1C;
+    }
+    .what{
+      background: url('https://4.bp.blogspot.com/-N1cRoZUPc7c/VYUhHQuhtyI/AAAAAAABoeU/TWnDBdrat6Y/s0/Dark_Material_Design_uhd.jpg') center/cover;
+      width: 100%;
+      height: 400px;
+      text-align: center;
+    }
+    .head{
+      padding-top: 60px;
+      color: #FFEBEE;
+    }
+    .API{
+      background-color: #F44336;
+      padding-bottom: 30px;
+      padding-top: 30px;
+      text-align: center;
+    }
+    .card{
+      margin: 0 auto;
+      width: 80%;
+      height: 200px;
+    }
+    .img-1{
+      background: url('https://developers.xapo.com/static/images/api_logo.png') center/cover;
+    }
+    .searchNode{
+      margin: 0 auto;
+      color: #000;
+      width: 50%;
+      min-height: 0px;
+      padding-top: 9px;
+      padding-left: 9px;
+      padding-right: 9px;
+      padding-bottom: 9px;
+    }
+    .search_container{
+      height: 40px;
+    }
+    .header_news{
+      margin: 10px auto;
+      color: #ffffff;
+    }
+    </style>
   </head>
   <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div class="mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--scroll">
+        <div class="mdl-layout__header-row lol">
+          <span class="mdl-layout-title">Music Master</span>
+          <div class="mdl-layout-spacer"></div>
+          <nav class="mdl-navigation">
+            <!-- Add MDL Navigation Links here -->
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title"></span>
+        <nav class="mdl-navigation">
+          <!-- Add MDL Navigation Links here -->
+          <a class="mdl-navigation__link" href="git.html">Contribute</a>
+          <a class="mdl-navigation__link" href="https://newsapi.org/sources">View supported sources and their search names</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="what">
+          <div class="head">
+            <img src="https://prrt.co/img/logo/prrt-logo-md.png" width="100px" height="100px">
+            <div><h3>News anywhere, on any device</h3></div>
+            <div id="search" class="search_container">
+            </div>
+          </div>
+        </div>
+        <div class="API" id="root">
+        </div>
+        <div class="foot">
+          <p>Created by Narasimha Prasanan HN </p>
+        </div>
+      </main>
+    </div>
+    <!-- Modal Trigger -->
   </body>
 </html>
