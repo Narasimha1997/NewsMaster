@@ -13,7 +13,7 @@ class Search extends Component{
     this.setState({article:event.target.value})
   }
   search_api(){
-    let url = `http://newsapi.org/v1/articles?source=${this.state.article}&sortBy=top&`+
+    let url = `https://newsapi.org/v1/articles?source=${this.state.article}&sortBy=top&`+
     `apiKey=${this.API_KEY}`
     fetch(url,{
       method:'GET'
