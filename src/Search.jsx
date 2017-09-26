@@ -36,7 +36,7 @@ class Search extends Component{
   }
     render(){
       return <div className="mdl-card mdl-shadow--2dp searchNode">
-        <form action="#" onSubmit={this.search_api}>
+        <form onSubmit={this.search_api}>
           <div className="mdl-textfield mdl-js-textfield">
             <input className="mdl-textfield__input" type="text" id="sample1" value={this.state.article} onChange={this.handle_state}></input>
             <label className="mdl-textfield__label" for="sample1"></label>
