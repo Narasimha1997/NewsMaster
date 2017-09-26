@@ -36,15 +36,13 @@ class Search extends Component{
   }
     render(){
       return <div className="mdl-card mdl-shadow--2dp searchNode">
-        <form onSubmit={this.search_api}>
           <div className="mdl-textfield mdl-js-textfield">
             <input className="mdl-textfield__input" type="text" id="sample1" value={this.state.article} onChange={this.handle_state}></input>
             <label className="mdl-textfield__label" for="sample1"></label>
           </div>
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" type="submit"
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" onClick={this.search_api}
           ><i className="material-icons">search</i></button>
         <p>`searching for: `{this.state.article}</p>
-        </form>
       </div>
     }
 }
