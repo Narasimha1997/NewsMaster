@@ -10,7 +10,7 @@ class Result extends Component{
         <div>Failed to fetch news, make sure the source you are looking exists.</div>
       )
     return (<div>
-       <h4 className="header_news">Latest news from:  {this.props.bundle.article}</h4>
+       
        <div className="mdl-grid my_gr">
        {news_data.articles.map((article, index) =>
           (
