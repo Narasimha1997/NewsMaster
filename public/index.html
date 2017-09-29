@@ -9,6 +9,15 @@
     <title>News Master</title>
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
     <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <link rel="shortcut icon" href="https://prrt.co/img/logo/prrt-logo-md.png">
+    <!-- Add manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <!-- Tell the browser it's a PWA -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Tell iOS it's a PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Make sure theme-color is defined -->
+    <meta name="theme-color" content="#536878">
    <script>
   // Initialize Firebase
     var config = {
@@ -53,21 +62,33 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+   .main__{
+     background: #3F51B5;
+   }
     .lol{
-      background-color: #B71C1C;
+      background-color: #673AB7;
     }
     .what{
-      background: url('https://4.bp.blogspot.com/-N1cRoZUPc7c/VYUhHQuhtyI/AAAAAAABoeU/TWnDBdrat6Y/s0/Dark_Material_Design_uhd.jpg') center/cover;
+      background: #673AB7;
       width: 100%;
       height: 400px;
+      color: #000;
       text-align: center;
     }
     .head{
       padding-top: 60px;
       color: #FFEBEE;
     }
+    .mc{
+      margin: 80px auto;
+      width: 95%;
+    }
+    .background_news > .mdl-card__title{
+      background: url('https://lh5.googleusercontent.com/-8h1uZ5aGQrE/VK-7a5KmJEI/AAAAAAAAF9Q/AYekIbRYMw8/w2048-h1152/mountainsday.png') center/cover;
+      height: 300px;
+    }
     .API{
-      background-color: #F44336;
+      background-color: #3F51B5;
       padding-bottom: 30px;
       padding-top: 30px;
       text-align: center;
@@ -82,24 +103,46 @@
     }
     .searchNode{
       margin: 0 auto;
-      color: #000;
-      width: 50%;
-      min-height: 0px;
-      padding-top: 9px;
-      padding-left: 9px;
-      padding-right: 9px;
-      padding-bottom: 9px;
+      width: 80%;
+      height: 100px;
     }
     .search_container{
+      margin-top: 10px;
       height: 40px;
     }
     .header_news{
       margin: 10px auto;
       color: #ffffff;
     }
+    .search_text{
+      background: #673AB7;
+      color: #000;
+    }
+    .search_button{
+      margin-top: 10px;
+      background: #673AB7;
+      color: #fff;
+    }
     </style>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          }).catch(function(err) {
+            console.log(err)
+          });
+        });
+      } else {
+        console.log('service worker is not supported');
+      }
+    </script>
   </head>
-  <body>
+  <body class="main__">
     <div class="mdl-layout mdl-js-layout">
       <header class="mdl-layout__header mdl-layout__header--scroll">
         <div class="mdl-layout__header-row lol">
@@ -107,6 +150,7 @@
           <div class="mdl-layout-spacer"></div>
           <nav class="mdl-navigation">
             <!-- Add MDL Navigation Links here -->
+            <a class="mdl-navigation__link" href="git.html">Contribute</a>
           </nav>
         </div>
       </header>
@@ -119,12 +163,12 @@
         </nav>
       </div>
       <main class="mdl-layout__content">
-        <div class="what">
-          <div class="head">
-            <img src="https://prrt.co/img/logo/prrt-logo-md.png" width="100px" height="100px">
-            <div><h3>News anywhere, on any device</h3></div>
-            <div id="search" class="search_container">
-            </div>
+        <div class="background_news mdl-card mdl-shadow--2dp mc">
+          <div class="mdl-card__title">
+            <h3 class="mdl-card__title-text" style="color: #fff;">News everywhere</h3>
+          </div>
+          <div class="mdl-card--border" id="search" style="text-align: center;">
+
           </div>
         </div>
         <div class="API" id="root">

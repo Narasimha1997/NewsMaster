@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Music Master</title>
+    <title>News Master</title>
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
     .lol{
-      background-color: #B71C1C;
+      background-color: #673AB7;
     }
     .git_{
       background-color: #faf6ec;
-      width: 80%;
+      width: 95%;
       padding-left: 30px;
       text-align: center;
       margin: 40px auto;
@@ -28,13 +28,29 @@
       text-align: center;
       margin-bottom: 0px;
     }
+    .background_mean>.mdl-card__title{
+      background: url('https://drdw8nfjvtevv.cloudfront.net/wp-content/uploads/2016/02/Header.png') center/cover;
+      height: 300px;
+    }
+    .background_git>.mdl-card__title{
+      background: url('https://enterprise.github.com/assets/aws/jetpack-octocat-airlock-b4e1d022c0113c997328f6598d16e58ad049140e50da4859d6b4d174890bb1c8.jpg') center/cover;
+      height: 300px;
+    }
+    .ww{
+      margin: 10px auto;
+      width: 95%;
+    }
+    .pwa_web > .mdl-card__title{
+      background: url('http://insanelab.com/wp-content/uploads/2017/01/progressive-web-apps-pwa-1120x408.jpg') center/cover;
+      height: 300px;
+    }
     </style>
   </head>
   <body>
     <div class="mdl-layout mdl-js-layout">
       <header class="mdl-layout__header mdl-layout__header--scroll">
         <div class="mdl-layout__header-row lol">
-          <span class="mdl-layout-title">Music Master</span>
+          <span class="mdl-layout-title">News Master</span>
           <div class="mdl-layout-spacer"></div>
           <nav class="mdl-navigation">
             <!-- Add MDL Navigation Links here -->
@@ -45,20 +61,55 @@
         <span class="mdl-layout-title"></span>
         <nav class="mdl-navigation">
           <!-- Add MDL Navigation Links here -->
+          <a class="mdl-navigation__link" href="index.html"> <- Go Back </a>
+          <a class="mdl-navigation__link" href="https://newsapi.org/sources">View available news sources</a>
         </nav>
       </div>
-      <main class="mdl-layout__content">
-        <div class="mdl-card mdl-shadow--2dp git_">
-          <div class="git_left">
-            <img src="assets/git.gif" width="410px" height="470px">
+      <main class="mdl-layout__content" style="background: #673AB7;">
+        <div class="background_git mdl-card mdl-shadow--2dp" style="margin: 30px auto; width: 80%">
+          <div class="mdl-card__title">
+            <h3 class="mdl-card__title-text" style="color: #fff;">Power of OpenSource</h3>
           </div>
-          <div class="p_graph">
-            <h3>Developed on GitHub</h3>
-          </p>Music Master is a react-js app developed actively on GitHub<br>, meaning.. It is completely
-          open source,<br> you can clone the project or contribute your code <br> Help us build the app better</br>
-          <form action="https://github.com/Narasimha1997/NewsMaster" method="get">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary">Visit GitHub repo</button>
-          </form>
+          <div class="mdl-card__supporting-text">
+            News Master is completely an OpenSource project, meaning it's not propritery, the source code of the
+            application is available to all, you can clone it, modify it and do whatever you want, Since this is an
+            educational project there is no need to worry about licensing. If you want to be a part of this project then
+            contribute your idea at naraismhaprasannahn@gmail.com or you submit your code at the gitHub link provided.
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary"
+             href="https://github.com/Narasimha1997/NewsMaster">Visit GitHub repo</a>
+        </div>
+      </div>
+        <div class="background_mean mdl-card mdl-shadow--2dp" style="margin: 50px auto; width: 80%;">
+          <div class="mdl-card__title">
+            <h3 class="mdl-card__title-text" style="color: #fff;">Developed using React.js</h3>
+          </div>
+          <div class="mdl-card__supporting-text">
+            News master is built completely using Facebook's JavaScript client framework called React.js,
+            React.js provides a flexible components based architecture for building the next generation of Web
+            applications, components based architecture means, you can build a web page composed of components,
+            these components can be controlled and act according to changes of state. For more information visit react.js
+            official site. (Image: React.js Barcelona conference 2016).
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" href="https://facebook.github.io/react/">
+              Visit react.js official</a>
+          </div>
+        </div>
+        <div class="pwa_web mdl-card mdl-shadow--2dp " style="margin: 50px auto; width: 80%;">
+          <div class="mdl-card__title">
+            <h3 class="mdl-card__title-text">Built with Progressive web technology</h3>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Progressive web apps are the next generation of web, With PWAs you can create awesome web experiences,
+             Web apps can behave just like your normal application does, like they can be added to home screen, work
+             offline and support many native features which are not available for a typical web app. For more information
+             on PWA refer to google developers blog.
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary"
+            href="https://developers.google.com/web/progressive-web-apps/">Vist google blog</a>
           </div>
         </div>
       </main>
